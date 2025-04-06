@@ -4,6 +4,9 @@
 // This program that compare 3 numbers from smallest to biggest
 
 #include <iostream>
+#include <algorithm>
+#include <iomanip>
+#include <string>
 
 int main() {
     //
@@ -12,8 +15,6 @@ int main() {
     std::string firstNumStr, secondNumStr, thirdNumStr;
     // 
     int firstNumInt, secondNumInt, thirdNumInt;
-    //
-    std::cout << "Hello!Welcome to this program!";
     // 
     std::cout << "Please enter the first number as an integer: ";
     std::cin >> firstNumStr;
@@ -34,13 +35,12 @@ int main() {
         if (firstNumInt == secondNumInt || firstNumInt == thirdNumInt || secondNumInt == thirdNumInt) {
             std::cout << "Some numbers are equal." << std::endl;
         }
-
         //
         if (firstNumInt < secondNumInt && firstNumInt < thirdNumInt) {
             if (secondNumInt < thirdNumInt) {
-                std::cout << "The number order is: " << firstNumber << " < " << secondNumber << " < " << thirdNumber << std::endl;
+                std::cout << "The number order is: " << firstNumInt << " < " << secondNumInt << " < " << thirdNumInt << std::endl;
             } else {
-                std::cout << "The number order is: " << firstNumber << " < " << thirdNumber << " < " << secondNumber << std::endl;
+                std::cout << "The number order is: " << firstNumInt << " < " << thirdNumInt << " < " << secondNumInt << std::endl;
             }
 
         } else {
@@ -57,4 +57,23 @@ int main() {
                     std::cout << "The number order is: " << thirdNumInt << " < " << secondNumInt << " < " << firstNumInt << std::endl;
                 }
             }
-        }
+    }
+    //
+    int smallest = std::min({firstNumInt, secondNumInt, thirdNumInt});
+    int largest = std::max({firstNumInt, secondNumInt, thirdNumInt});
+    //
+    float average = (firstNumInt + secondNumInt + thirdNumInt) / 3.0;
+
+    //
+    std::cout << "The smallest number is: " << smallest << std::endl;
+    //
+    std::cout << "The largest number is: " << largest << std::endl;
+    //
+    std::cout << std::setprecision(3);
+    std::cout << "The average is: " << average << std::endl;
+    
+    } catch (std::invalid_argument const &e) {
+        std::cout << "Invalid input, please try again." << std::endl;
+    }
+    std::cout << "Thank you for using the program!" << std::endl;
+    }
