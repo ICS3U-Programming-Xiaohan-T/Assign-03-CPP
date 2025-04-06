@@ -34,4 +34,27 @@ int main() {
         if (firstNumInt == secondNumInt || firstNumInt == thirdNumInt || secondNumInt == thirdNumInt) {
             std::cout << "Some numbers are equal." << std::endl;
         }
+
+        //
+        if (firstNumInt < secondNumInt && firstNumInt < thirdNumInt) {
+            if (secondNumInt < thirdNumInt) {
+                std::cout << "The number order is: " << firstNumber << " < " << secondNumber << " < " << thirdNumber << std::endl;
+            } else {
+                std::cout << "The number order is: " << firstNumber << " < " << thirdNumber << " < " << secondNumber << std::endl;
+            }
+
+        } else {
+            if (secondNumInt < firstNumInt && secondNumInt < thirdNumInt) {
+                if (firstNumInt < thirdNumInt) {
+                    std::cout << "The number order is: " << secondNumInt << " < " << firstNumInt << " < " << thirdNumInt << std::endl;
+                } else {
+                    std::cout << "The number order is: " << secondNumInt << " < " << thirdNumInt << " < " << firstNumInt << std::endl;
+                }
+            } else {
+                if (firstNumInt < secondNumInt) {
+                    std::cout << "The number order is: " << thirdNumInt << " < " << firstNumInt << " < " << secondNumInt << std::endl;
+                } else {
+                    std::cout << "The number order is: " << thirdNumInt << " < " << secondNumInt << " < " << firstNumInt << std::endl;
+                }
+            }
         }
