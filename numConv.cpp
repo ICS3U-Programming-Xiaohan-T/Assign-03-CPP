@@ -29,16 +29,19 @@ int main() {
         secondNumInt = std::stoi(secondNumStr);
         thirdNumInt = std::stoi(thirdNumStr);
         // Check if any two numbers are equal
-        if (firstNumInt == secondNumInt || firstNumInt == thirdNumInt || secondNumInt == thirdNumInt) {
+        if (firstNumInt == secondNumInt || firstNumInt == thirdNumInt
+            || secondNumInt == thirdNumInt) {
             std::cout << "Some numbers are equal." << std::endl;
         }
         // Begin comparing the numbers to list them from smallest to largest
         if (firstNumInt < secondNumInt && firstNumInt < thirdNumInt) {
             // First number is the smallest and compare.
             if (secondNumInt < thirdNumInt) {
-                std::cout << "The number order is: " << firstNumInt << " < " << secondNumInt << " < " << thirdNumInt << std::endl;
+                std::cout << "The number order is: " << firstNumInt << " < "
+                << secondNumInt << " < " << thirdNumInt << std::endl;
             } else {
-                std::cout << "The number order is: " << firstNumInt << " < " << thirdNumInt << " < " << secondNumInt << std::endl;
+                std::cout << "The number order is: " << firstNumInt
+                << " < " << thirdNumInt << " < " << secondNumInt << std::endl;
             }
 
         } else {
@@ -46,16 +49,24 @@ int main() {
             if (secondNumInt < firstNumInt && secondNumInt < thirdNumInt) {
                 // Compare first and third number
                 if (firstNumInt < thirdNumInt) {
-                    std::cout << "The number order is: " << secondNumInt << " < " << firstNumInt << " < " << thirdNumInt << std::endl;
+                    std::cout << "The number order is: " << secondNumInt
+                    << " < " << firstNumInt << " < "
+                    << thirdNumInt << std::endl;
                 } else {
-                    std::cout << "The number order is: " << secondNumInt << " < " << thirdNumInt << " < " << firstNumInt << std::endl;
+                    std::cout << "The number order is: " << secondNumInt
+                    << " < " << thirdNumInt << " < "
+                    << firstNumInt << std::endl;
                 }
             } else {
                 // Third number is the smallest
                 if (firstNumInt < secondNumInt) {
-                    std::cout << "The number order is: " << thirdNumInt << " < " << firstNumInt << " < " << secondNumInt << std::endl;
+                    std::cout << "The number order is: " << thirdNumInt
+                    << " < " << firstNumInt << " < "
+                    << secondNumInt << std::endl;
                 } else {
-                    std::cout << "The number order is: " << thirdNumInt << " < " << secondNumInt << " < " << firstNumInt << std::endl;
+                    std::cout << "The number order is: " << thirdNumInt
+                    << " < " << secondNumInt << " < "
+                    << firstNumInt << std::endl;
                 }
             }
     }
@@ -70,7 +81,6 @@ int main() {
     // Display the average with 2 decimal places
     std::cout << std::fixed << std::setprecision(2);
     std::cout << "The average is: " << average << std::endl;
-    
     } catch (std::invalid_argument const &e) {
         // Exceptions where enter an invalid input
         std::cout << "Invalid input, please try again." << std::endl;
