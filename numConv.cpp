@@ -50,6 +50,7 @@ int main() {
                     std::cout << "The number order is: " << secondNumInt << " < " << thirdNumInt << " < " << firstNumInt << std::endl;
                 }
             } else {
+                // Third number is the smallest
                 if (firstNumInt < secondNumInt) {
                     std::cout << "The number order is: " << thirdNumInt << " < " << firstNumInt << " < " << secondNumInt << std::endl;
                 } else {
@@ -57,17 +58,15 @@ int main() {
                 }
             }
     }
-    //
+    // Find and display smallest and largest number using std::min and std::max
     int smallest = std::min({firstNumInt, secondNumInt, thirdNumInt});
     int largest = std::max({firstNumInt, secondNumInt, thirdNumInt});
-    //
+    // Calculate the average with 2 decimal places
     float average = (firstNumInt + secondNumInt + thirdNumInt) / 3.0;
 
-    //
     std::cout << "The smallest number is: " << smallest << std::endl;
-    //
     std::cout << "The largest number is: " << largest << std::endl;
-    //
+    // Display the average with 2 decimal places
     std::cout << std::setprecision(3);
     std::cout << "The average is: " << average << std::endl;
     
