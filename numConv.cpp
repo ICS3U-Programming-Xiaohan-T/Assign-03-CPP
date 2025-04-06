@@ -15,7 +15,7 @@ int main() {
     std::string firstNumStr, secondNumStr, thirdNumStr;
     // Declare variables to hold converted integers
     int firstNumInt, secondNumInt, thirdNumInt;
-    // Get input from the user
+    // Get input from the user and store it to the related variable
     std::cout << "Please enter the first number as an integer: ";
     std::cin >> firstNumStr;
     std::cout << "Please enter the second number as an integer: ";
@@ -42,8 +42,9 @@ int main() {
             }
 
         } else {
+            // Second number is the smallest, compare first and third
             if (secondNumInt < firstNumInt && secondNumInt < thirdNumInt) {
-                // Second number is the smallest, compare first and third
+                // Compare first and third number
                 if (firstNumInt < thirdNumInt) {
                     std::cout << "The number order is: " << secondNumInt << " < " << firstNumInt << " < " << thirdNumInt << std::endl;
                 } else {
@@ -67,11 +68,13 @@ int main() {
     std::cout << "The smallest number is: " << smallest << std::endl;
     std::cout << "The largest number is: " << largest << std::endl;
     // Display the average with 2 decimal places
-    std::cout << std::setprecision(3);
+    std::cout << std::fixed << std::setprecision(2);
     std::cout << "The average is: " << average << std::endl;
     
     } catch (std::invalid_argument const &e) {
+        // Exceptions where enter an invalid input
         std::cout << "Invalid input, please try again." << std::endl;
     }
+    // Ending message
     std::cout << "Thank you for using the program!" << std::endl;
     }
