@@ -45,6 +45,10 @@ int main() {
             } else {
                 std::cout << "The number order is: " << firstNumInt << " < " << thirdNumInt << " < " << secondNumInt << std::endl;
             }
-
-        
+        } else {
+            if (firstNumInt < secondNumInt) {
+                std::cout << "The number order is: " << thirdNumInt << " < " << firstNumInt << " < " << secondNumInt << std::endl;
+            } else {
+                std::cout << "The number order is: " << thirdNumInt << " < " << secondNumInt << " < " << firstNumInt << std::endl;
+            }
         }
