@@ -30,25 +30,8 @@ int main() {
         secondNumInt = std::stoi(secondNumStr);
         thirdNumInt = std::stoi(thirdNumStr);
         //
-        // Check if all numbers are equal
-        if (firstNumInt == secondNumInt && secondNumInt == thirdNumInt) {
-            std::cout << "All numbers are equal!" << std::endl;
-        // 
-        } else if (firstNumInt == secondNumInt || firstNumInt == thirdNumInt || secondNumInt == thirdNumInt){
-            std::cout << "Some numbers are equal!" << std::endl;
+        // Check if any two numbers are equal
+        if (firstNumInt == secondNumInt || firstNumInt == thirdNumInt || secondNumInt == thirdNumInt) {
+            std::cout << "Some numbers are equal." << std::endl;
         }
-
-        //
-        if (firstNumInt < secondNumInt && firstNumInt < thirdNumInt) {
-            if (secondNumInt < thirdNumInt) {
-                std::cout << "The number order is: " << firstNumInt << " < " << secondNumInt << " < " << thirdNumInt << std::endl;
-            } else {
-                std::cout << "The number order is: " << firstNumInt << " < " << thirdNumInt << " < " << secondNumInt << std::endl;
-            }
-        } else {
-            if (firstNumInt < secondNumInt) {
-                std::cout << "The number order is: " << thirdNumInt << " < " << firstNumInt << " < " << secondNumInt << std::endl;
-            } else {
-                std::cout << "The number order is: " << thirdNumInt << " < " << secondNumInt << " < " << firstNumInt << std::endl;
-            }
         }
