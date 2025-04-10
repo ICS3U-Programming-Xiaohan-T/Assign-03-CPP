@@ -4,8 +4,11 @@
 // This program that compare 3 numbers from smallest to biggest
 
 #include <iostream>
+// Provides algorithms like std::min, std::max, etc.
 #include <algorithm>
+// Controlling decimal precision
 #include <iomanip>
+// allows us to use the std::string class for handling strings
 #include <string>
 
 int main() {
